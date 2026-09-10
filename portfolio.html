@@ -166,6 +166,17 @@ h1{
     color:#00e5ff;
 }
 
+.profile-photo{
+    width:190px;
+    height:190px;
+    display:block;
+    object-fit:cover;
+    object-position:center top;
+    margin:auto;
+    border:2px solid #00e5ff;
+    border-radius:50%;
+}
+
 .profile h3{
     margin-top:20px;
     font-size:25px;
@@ -191,6 +202,34 @@ h1{
 .about{
     max-width:1000px;
     margin:auto;
+}
+
+.about-content{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-photo{
+    aspect-ratio:4 / 5;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #292929;
+    border-radius:18px;
+    box-shadow:0 18px 45px rgba(0,0,0,.3);
+}
+
+.about-photo img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.about-details{
+    min-width:0;
 }
 
 .about h3{
@@ -489,6 +528,11 @@ footer p{
     .info{
         grid-template-columns:1fr;
     }
+
+    .about-content{
+        grid-template-columns:220px 1fr;
+        gap:30px;
+    }
 }
 
 @media(max-width:500px){
@@ -507,6 +551,22 @@ footer p{
 
     .profile{
         width:100%;
+    }
+
+    .profile-photo{
+        width:min(190px, 58vw);
+        height:min(190px, 58vw);
+    }
+
+    .about-content{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .about-photo{
+        max-width:260px;
+        width:100%;
+        margin:auto;
     }
 }
 </style>
@@ -572,9 +632,7 @@ footer p{
 
     <div class="profile">
 
-        <div class="profile-circle">
-            ME
-        </div>
+        <img class="profile-photo" src="./professional-photo.jpg" alt="Professional portrait of Megala E">
 
         <h3>Megala E</h3>
 
@@ -602,38 +660,49 @@ footer p{
 
     <div class="about">
 
-        <h3>AI & Data Science Student</h3>
+        <div class="about-content">
 
-        <p>
-            I am a Pre-Final Year B.Tech Artificial Intelligence
-            & Data Science student with a strong interest in
-            Software Engineering, Data Science and Machine Learning.
-        </p>
-
-        <p>
-            I enjoy solving programming problems, analysing data
-            and developing practical technology solutions.
-        </p>
-
-        <div class="info">
-
-            <div>
-                <b>Education</b>
-                <p>B.Tech – AI & Data Science</p>
+            <div class="about-photo">
+                <img src="./professional-photo.jpg" alt="Professional portrait of Megala E">
             </div>
 
-            <div>
-                <b>College</b>
-                <p>SKP Engineering College</p>
-            </div>
+            <div class="about-details">
 
-            <div>
-                <b>Location</b>
-                <p>Tiruvannamalai, Tamil Nadu</p>
+                <h3>AI & Data Science Student</h3>
+
+                <p>
+                    I am a Pre-Final Year B.Tech Artificial Intelligence
+                    & Data Science student with a strong interest in
+                    Software Engineering, Data Science and Machine Learning.
+                </p>
+
+                <p>
+                    I enjoy solving programming problems, analysing data
+                    and developing practical technology solutions.
+                </p>
+
+                <div class="info">
+
+                    <div>
+                        <b>Education</b>
+                        <p>B.Tech – AI & Data Science</p>
+                    </div>
+
+                    <div>
+                        <b>College</b>
+                        <p>SKP Engineering College</p>
+                    </div>
+
+                    <div>
+                        <b>Location</b>
+                        <p>Tiruvannamalai, Tamil Nadu</p>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
-
     </div>
 
 </section>
