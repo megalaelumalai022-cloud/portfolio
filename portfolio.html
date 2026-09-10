@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Megala E | Portfolio</title>
+<script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
 *{
@@ -173,6 +174,17 @@ h1{
 .profile p{
     color:#aaa;
     font-size:13px;
+}
+
+.icon{
+    width:1em;
+    height:1em;
+    vertical-align:-.12em;
+    stroke-width:2;
+}
+
+.status-icon{
+    color:#00e5ff;
 }
 
 /* ABOUT */
@@ -571,7 +583,8 @@ footer p{
         </p>
 
         <p style="color:#00e5ff;margin-top:15px;">
-            ● Open to Opportunities
+            <i data-lucide="circle-check" class="icon status-icon" aria-hidden="true"></i>
+            Open to Opportunities
         </p>
 
     </div>
@@ -637,7 +650,7 @@ footer p{
     <div class="skills">
 
         <div class="skill">
-            <h3>🐍 Python</h3>
+            <h3><i data-lucide="braces" class="icon" aria-hidden="true"></i> Python</h3>
             <p>
                 Data processing, scripting, analysis and
                 problem solving.
@@ -645,49 +658,49 @@ footer p{
         </div>
 
         <div class="skill">
-            <h3>☕ Java</h3>
+            <h3><i data-lucide="coffee" class="icon" aria-hidden="true"></i> Java</h3>
             <p>
                 Object-oriented programming and application development.
             </p>
         </div>
 
         <div class="skill">
-            <h3>⚙️ C++</h3>
+            <h3><i data-lucide="settings-2" class="icon" aria-hidden="true"></i> C++</h3>
             <p>
                 OOP, algorithms, data structures and programming.
             </p>
         </div>
 
         <div class="skill">
-            <h3>🗄️ SQL</h3>
+            <h3><i data-lucide="database" class="icon" aria-hidden="true"></i> SQL</h3>
             <p>
                 Queries, joins, filtering and data manipulation.
             </p>
         </div>
 
         <div class="skill">
-            <h3>📊 Data Science</h3>
+            <h3><i data-lucide="bar-chart-3" class="icon" aria-hidden="true"></i> Data Science</h3>
             <p>
                 EDA, data cleaning, feature engineering and visualization.
             </p>
         </div>
 
         <div class="skill">
-            <h3>📈 Pandas & NumPy</h3>
+            <h3><i data-lucide="trending-up" class="icon" aria-hidden="true"></i> Pandas & NumPy</h3>
             <p>
                 Data analysis and numerical data processing.
             </p>
         </div>
 
         <div class="skill">
-            <h3>📉 Matplotlib</h3>
+            <h3><i data-lucide="chart-no-axes-combined" class="icon" aria-hidden="true"></i> Matplotlib</h3>
             <p>
                 Data visualization and analytical charts.
             </p>
         </div>
 
         <div class="skill">
-            <h3>💻 Git & GitHub</h3>
+            <h3><i data-lucide="github" class="icon" aria-hidden="true"></i> Git & GitHub</h3>
             <p>
                 Version control and project collaboration.
             </p>
@@ -823,7 +836,7 @@ footer p{
 
         <div class="achievement">
 
-            <h3>🏆 Best Design Award</h3>
+            <h3><i data-lucide="trophy" class="icon" aria-hidden="true"></i> Best Design Award</h3>
 
             <p>
                 Received the Best Design Award in a competitive
@@ -836,7 +849,7 @@ footer p{
 
         <div class="achievement">
 
-            <h3>🎤 College PPT Presentation</h3>
+            <h3><i data-lucide="presentation" class="icon" aria-hidden="true"></i> College PPT Presentation</h3>
 
             <p>
                 Recognised for delivering clear and impactful
@@ -849,7 +862,7 @@ footer p{
 
         <div class="achievement">
 
-            <h3>📜 HackerRank Certification</h3>
+            <h3><i data-lucide="scroll-text" class="icon" aria-hidden="true"></i> HackerRank Certification</h3>
 
             <p>
                 Certified in problem solving and programming practice.
@@ -860,7 +873,7 @@ footer p{
 
         <div class="achievement">
 
-            <h3>💻 Cybernaut / Tech Trio</h3>
+            <h3><i data-lucide="code-2" class="icon" aria-hidden="true"></i> Cybernaut / Tech Trio</h3>
 
             <p>
                 Completed hands-on technical training in programming
@@ -935,17 +948,17 @@ footer p{
             </p>
 
             <div class="contact-item">
-                <strong>📧 Email</strong>
+                <strong><i data-lucide="mail" class="icon" aria-hidden="true"></i> Email</strong>
                 <p>megalaelumalai022@gmail.com</p>
             </div>
 
             <div class="contact-item">
-                <strong>📱 Phone</strong>
+                <strong><i data-lucide="phone" class="icon" aria-hidden="true"></i> Phone</strong>
                 <p>+91 96294 62897</p>
             </div>
 
             <div class="contact-item">
-                <strong>📍 Location</strong>
+                <strong><i data-lucide="map-pin" class="icon" aria-hidden="true"></i> Location</strong>
                 <p>Tiruvannamalai, Tamil Nadu</p>
             </div>
 
@@ -1012,6 +1025,8 @@ function sendMessage(event){
     );
 
 }
+
+lucide.createIcons();
 
 </script>
 
