@@ -285,8 +285,14 @@ h1{
 }
 
 .internship span{
+    display:block;
+    margin-top:28px;
     color:#00e5ff;
     font-size:13px;
+}
+
+.internship span:first-child{
+    margin-top:0;
 }
 
 .internship h3{
@@ -307,6 +313,18 @@ h1{
 
 .internship ul{
     margin:15px 0 0 20px;
+}
+
+.internship .view-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:8px 14px;
+    border-radius:20px;
+    background:#00e5ff;
+    color:#000;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
 }
 
 /* PROJECTS */
@@ -344,6 +362,19 @@ h1{
     margin:15px 0 0 18px;
 }
 
+.project-link{
+    display:inline-block;
+    margin-top:15px;
+    color:#00e5ff;
+    font-size:13px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.project-link:hover{
+    text-decoration:underline;
+}
+
 /* ACHIEVEMENTS */
 .achievements{
     display:grid;
@@ -366,6 +397,59 @@ h1{
 .achievement p{
     color:#666;
     font-size:13px;
+}
+
+/* CERTIFICATES */
+.certificates{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.certificate-card{
+    background:#161616;
+    border:1px solid #292929;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-7px);
+    border-color:#00e5ff;
+}
+
+.certificate-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    background:#111;
+    pointer-events:none;
+}
+
+.certificate-card h3{
+    padding:18px 18px 8px;
+    font-size:18px;
+}
+
+.certificate-card p{
+    padding:0 18px 18px;
+    color:#999;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.certificate-card .view-btn{
+    margin:0 18px 18px;
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:20px;
+    background:#00e5ff;
+    color:#000;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:bold;
 }
 
 /* EDUCATION */
@@ -503,6 +587,10 @@ footer p{
         grid-template-columns:1fr;
     }
 
+    .certificates{
+        grid-template-columns:1fr 1fr;
+    }
+
     .contact{
         grid-template-columns:1fr;
     }
@@ -527,6 +615,10 @@ footer p{
     }
 
     .skills{
+        grid-template-columns:1fr;
+    }
+
+    .certificates{
         grid-template-columns:1fr;
     }
 
@@ -563,6 +655,7 @@ footer p{
         <li><a href="#internship">Internship</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -593,6 +686,10 @@ footer p{
 
             <a href="#projects" class="btn">
                 View Projects
+            </a>
+
+            <a href="file:///C:/Users/acer/Downloads/E.Megala_CV.pdf" class="btn outline" target="_blank" download>
+                Download CV
             </a>
 
             <a href="#contact" class="btn outline">
@@ -641,14 +738,15 @@ footer p{
                 <h3>AI & Data Science Student</h3>
 
                 <p>
-                    I am a Pre-Final Year B.Tech Artificial Intelligence
-                    & Data Science student with a strong interest in
-                    Software Engineering, Data Science and Machine Learning.
-                </p>
-
-                <p>
-                    I enjoy solving programming problems, analysing data
-                    and developing practical technology solutions.
+                    I am a Pre-Final Year B.Tech student in Artificial Intelligence
+                    and Data Science, with a strong interest in Software Engineering,
+                    Data Science, and Machine Learning. I enjoy solving complex problems
+                    through technology, transforming data into meaningful insights, and
+                    creating practical solutions that have real-world impact. With a
+                    passion for user-focused innovation and continuous learning, I aim
+                    to develop impactful projects and contribute effectively to
+                    professional environments through technical expertise,
+                    creativity, and problem-solving skills.
                 </p>
 
                 <div class="info">
@@ -760,23 +858,40 @@ footer p{
 
     <div class="internship">
 
-        <span>JUL 2026 – AUG 2026</span>
+        <span>JUL 2026 - AUG 2026</span>
 
         <h3>Data Science Intern</h3>
 
         <h4>Thiranex</h4>
 
         <p>
-            Worked on real-time data science projects involving
-            data cleaning, preprocessing, exploratory data analysis
-            and visualization.
+            Completed a data science internship focused on programming,
+            data analysis and practical project work.
         </p>
 
         <ul>
             <li>Worked with Python, Pandas and NumPy.</li>
             <li>Performed data analysis and visualization.</li>
-            <li>Analysed complex data patterns.</li>
             <li>Maintained project documentation.</li>
+        </ul>
+
+        <a href="file:///C:/Users/acer/Downloads/internship%20certificata.jpeg" target="_blank" rel="noopener noreferrer" class="view-btn">View Certificate</a>
+
+        <span> CURRENTLY ONGOING | OFFLINE</span>
+
+        <h3>Cloud Computing Intern</h3>
+
+        <h4>Dvein Innovations</h4>
+
+        <p>
+            Currently pursuing an offline internship in the cloud computing
+            domain at Dvein Innovations.
+        </p>
+
+        <ul>
+            <li>Learning cloud computing concepts and services.</li>
+            <li>Gaining practical experience through hands-on training.</li>
+            <li>Working on cloud-focused tasks and project documentation.</li>
         </ul>
 
     </div>
@@ -789,7 +904,7 @@ footer p{
 
     <div class="title">
         <p>MY WORK</p>
-        <h2>Featured <span>Projects</span></h2>
+        <h2>Projects</h2>
     </div>
 
     <div class="projects">
@@ -842,12 +957,14 @@ footer p{
 
             <div class="number">03</div>
 
-            <h3>Student Task & Assignment Management</h3>
+            <h3>Student Management Project</h3>
 
             <p>
-                A software solution designed to organise student
-                academic tasks and assignments efficiently.
+                A web-based student management system designed to organise
+                student records, academic tasks and assignments efficiently.
             </p>
+
+            <a href="https://student-management-system-fj67-megalaelumalai022-3187.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">View Student Management Project</a>
 
             <ul>
                 <li>Assignment tracking.</li>
@@ -868,7 +985,7 @@ footer p{
 
     <div class="title">
         <p>MY MILESTONES</p>
-        <h2>Achievements & <span>Certifications</span></h2>
+        <h2><span>Achievements</span></h2>
     </div>
 
     <div class="achievements">
@@ -901,17 +1018,6 @@ footer p{
 
         <div class="achievement">
 
-            <h3><i data-lucide="scroll-text" class="icon" aria-hidden="true"></i> HackerRank Certification</h3>
-
-            <p>
-                Certified in problem solving and programming practice.
-            </p>
-
-        </div>
-
-
-        <div class="achievement">
-
             <h3><i data-lucide="code-2" class="icon" aria-hidden="true"></i> Cybernaut / Tech Trio</h3>
 
             <p>
@@ -926,35 +1032,51 @@ footer p{
 </section>
 
 
-<!-- EDUCATION -->
-<section class="education">
+<!-- CERTIFICATES -->
+<section id="certificates">
 
     <div class="title">
-
-        <p>MY ACADEMIC JOURNEY</p>
-
-        <h2>My <span>Education</span></h2>
-
+        <p>MY CREDENTIALS</p>
+        <h2>Certificates</h2>
     </div>
 
-    <div class="education-card">
+    <div class="certificates">
 
-        <h3>
-            B.Tech – Artificial Intelligence & Data Science
-        </h3>
+        <div class="certificate-card">
+            <h3>C++ Certificate</h3>
+            <p>Completed a C++ certification focused on programming fundamentals and problem-solving.</p>
+            <a href="file:///C:/Users/acer/Downloads/c++%20certificate.jpeg" target="_blank" class="view-btn">View Certificate</a>
+        </div>
 
-        <h4>
-            SKP Engineering College, Tiruvannamalai
-        </h4>
+        <div class="certificate-card">
+            <h3>Python Certificate</h3>
+            <p>Earned a Python certification covering core logic, scripting, and application development.</p>
+            <a href="file:///C:/Users/acer/Downloads/python%20certificate.jpeg" target="_blank" class="view-btn">View Certificate</a>
+        </div>
 
-        <p>
-            Pre-Final Year Student | 2025 – Present
-        </p>
+        <div class="certificate-card">
+            <h3>Java Certificate</h3>
+            <p>Completed a Java certification focused on object-oriented programming and coding principles.</p>
+            <a href="file:///C:/Users/acer/Downloads/java%20certificate.jpeg" target="_blank" class="view-btn">View Certificate</a>
+        </div>
 
-        <p style="margin-top:10px;">
-            Focused on Artificial Intelligence, Machine Learning,
-            Data Science, Software Engineering and programming.
-        </p>
+        <div class="certificate-card">
+            <h3>HackerRank C++</h3>
+            <p>Achieved a HackerRank certification in C++ with hands-on coding and algorithm practice.</p>
+            <a href="file:///C:/Users/acer/Downloads/hackerrank%20c%2B%2B%20certificate.jpeg" target="_blank" class="view-btn">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h3>HackerRank Python</h3>
+            <p>Earned a Python certification from HackerRank validating coding and problem-solving skills.</p>
+            <a href="file:///C:/Users/acer/Downloads/hackerrank%20python%20certificate.jpeg" target="_blank" class="view-btn">View Certificate</a>
+        </div>
+
+        <div class="certificate-card">
+            <h3>HackerRank Java</h3>
+            <p>Completed a HackerRank Java certification demonstrating programming competence and practice.</p>
+            <a href="file:///C:/Users/acer/Downloads/hackerrank%20java%20certificate.jpeg" target="_blank" class="view-btn">View Certificate</a>
+        </div>
 
     </div>
 
@@ -992,8 +1114,13 @@ footer p{
             </div>
 
             <div class="contact-item">
-                <strong><i data-lucide="phone" class="icon" aria-hidden="true"></i> Phone</strong>
-                <p>+91 96294 62897</p>
+                <strong><i data-lucide="github" class="icon" aria-hidden="true"></i> GitHub</strong>
+                <p><a href="https://github.com/megalaelumalai022-cloud" target="_blank" rel="noopener noreferrer" style="color:#00e5ff; text-decoration:none;">github.com/megalaelumalai022-cloud</a></p>
+            </div>
+
+            <div class="contact-item">
+                <strong><i data-lucide="linkedin" class="icon" aria-hidden="true"></i> LinkedIn</strong>
+                <p><a href="https://www.linkedin.com/in/megala-elumalai-32a578336?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="color:#00e5ff; text-decoration:none;">linkedin.com/in/megala-elumalai-32a578336</a></p>
             </div>
 
             <div class="contact-item">
